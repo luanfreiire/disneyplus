@@ -23,4 +23,4 @@ https://disneyplusluan.netlify.app/
   © Dev.Luan - 2025
 </strong>
 </p>
-)
+
