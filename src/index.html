@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon"
+        href="https://static-assets.bamgrid.com/product/disneyplus/favicons/favicon-aurora.9c40657cf520f9cfcf49dbb4f316aa7c.ico">
+    <title>Disney | Disney+</title>
+</head>
+
+<body class="bg-[#17171b]">
+    <header class="container">
+        <div class="relative overflow-hidden w-screen">
+            <img src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/C59CF9629B3D11E49A9EE842A117ADD29E85F2C49A1E92764899B238D6A8E7FC/compose?format=webp&width=2880"
+                alt="" class="absolute -z-10 inset-0 object-cover size-full sm:h-screen">
+
+            <div class="flex items-center justify-between p-4 mb-12 sm:mb-16 sm:p-8">
+                <div class="flex items-center gap-4 sm:gap-10">
+                    <a href="#">
+                        <img id="home" src="img/disney logo.png" alt="Logo Disney" class="w-20 sm:w-32">
+                    </a>
+                    <nav class="hidden md:flex text-gray-200 gap-8 text-2xl">
+                        <a href="#">
+                            <span class="bi bi-house-fill hover:text-gray-100"></span>
+                        </a>
+
+                        <a href="#filmes">
+                            <span class="bi bi-camera-reels-fill hover:text-gray-100"></span>
+                        </a>
+
+                        <a href="#series">
+                            <span class="bi bi-collection-play-fill hover:text-gray-100"></span>
+                        </a>
+
+                        <a href="#minha_lista">
+                            <span class="bi-plus-circle-fill hover:text-gray-100"></span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button onclick="btn_mobile()">
+                        <span
+                            class="md:hidden h-3 w-4 flex flex-col justify-between *:h-0.5 *:rounded-md *:bg-gray-200">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0D32EFF3766865DDC2292C7A0A77E28DBAC7A1645877899FE5B0F5B5E64B6EBD/scale?width=96&format=png"
+                        alt="" class="w-12 sm:w-16 cursor-pointer">
+                </div>
+            </div>
+
+            <!--logotipo disney-->
+            <div class="bg-gradient-to-t from-[#17171b] via-[#17171b] flex justify-center sm:mt-52">
+                <img class="w-44 sm:w-60"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/585D7040800507C80ADE9A4E9CB88C659E4662FBE1796922398D2A1304BC09DF/compose?format=webp&width=800"
+                    alt="">
+            </div>
+        </div>
+
+        <!--Menu Mobile-->
+        <div id="menu_mobile" class="hidden absolute inset-0 justify-end">
+            <nav class="bg-[#0e0b14]">
+                <div class="flex justify-center mt-8">
+                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0D32EFF3766865DDC2292C7A0A77E28DBAC7A1645877899FE5B0F5B5E64B6EBD/scale?width=96&format=png"
+                        alt="" class="w-16 cursor-pointer">
+                </div>
+                <p class="text-center text-gray-300 mt-2">Luan</p>
+
+                <ul class="text-gray-300 text-lg grid gap-8 p-8 *:flex *:gap-2">
+                    <li class="hover:text-gray-100">
+                        <span class="bi bi-house-fill"></span>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="hover:text-gray-100">
+                        <span class="bi bi-camera-reels-fill"></span>
+                        <a href="#filmes">Filmes</a>
+                    </li>
+                    <li class="hover:text-gray-100">
+                        <span class="bi bi-collection-play-fill"></span>
+                        <a href="#series">Séries</a>
+                    </li>
+                    <li class="hover:text-gray-100">
+                        <span class="bi-plus-circle-fill"></span>
+                        <a href="#minha_lista">Minha Lista</a>
+                    </li>
+                </ul>
+
+                <ul class="mt-10 px-8 text-gray-300 grid gap-4 text-sm">
+                    <li class="hover:text-gray-100">
+                        <a href="#">Configurações</a>
+                    </li>
+                    <li class="hover:text-gray-100">
+                        <a href="#">Conta</a>
+                    </li>
+                    <li class="hover:text-gray-100">
+                        <a href="#">Ajuda</a>
+                    </li>
+                    <li class="hover:text-gray-100">
+                        <a href="#">Sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!--obs:  O ideal seria criar essas seções em JavaScript para evitar a repetição de código. No entanto,
+         o objetivo principal deste projeto é a prática com o Tailwind CSS. Não descarto a possibilidade de, no
+         futuro, transferir essas seções para um arquivo .json. Contudo, nesta primeira versão, o foco está no
+          uso do Tailwind..-->
+
+        <!--destaques-->
+        <section id="filmes" class="container py-4 sm:px-10">
+            <h2 class="text-lg px-8 font-bold md:text-2xl text-gray-300">Destaques</h2>
+            <div
+                class="flex w-screen px-4 gap-4 lg:gap-8 mt-2 overflow-x-auto *:w-40 *:lg:w-64 *:rounded-md *:cursor-pointer">
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/646fe662-36aa-4e85-98c9-0c321014da46/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/ac70c442-571e-48ae-8733-7494bd7d27c6/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/9b4e7320-fcd3-4cc0-9cf0-5b46053fb70a/compose?format=webp&label=standard_art_disney-original_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/fc72ca44-92f6-4a10-9050-09fedffd8025/compose?format=webp&label=standard_art_disney-original_178&width=800"
+                    alt="">
+            </div>
+        </section>
+
+        <!--playlist-->
+        <section id="minha_lista" class="container py-4 sm:px-10">
+            <h2 class="text-lg px-8 font-bold md:text-2xl text-gray-300">Minha Lista</h2>
+            <div
+                class="flex w-screen px-4 gap-4 lg:gap-8 mt-2 overflow-x-auto *:rounded-md *:w-40 *:lg:w-64 *:cursor-pointer">
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/f7f5159d-03e8-4898-8ba3-990974338563/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/f307c9f9-f912-43dc-b24f-bc581a923992/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/974ff314-230a-4974-ba43-26e39f013362/compose?format=webp&label=standard_art_disney-original_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/df1c8bb6-71e7-4d46-9495-a9b5def88f48/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+            </div>
+        </section>
+
+        <!--filmes-->
+        <section id="filmes" class="container py-4 sm:px-10">
+            <h2 class="text-lg px-8 font-bold md:text-2xl text-gray-300">Filmes</h2>
+            <div
+                class="flex w-screen px-4 gap-4 lg:gap-8 mt-2 overflow-x-auto *:rounded-md *:w-40 *:lg:w-64 *:cursor-pointer">
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/0d3556ab-5291-4500-bd58-e40feb646699/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/6a2bc630-2e83-43fd-ae55-c840ee7f0099/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/a8a4963f-754e-45db-9e32-252fbdc60bd3/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/b011618c-6aff-49d0-aeca-408c5df6dbe8/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+            </div>
+        </section>
+
+        <!--series-->
+        <section id="series" class="container py-4 sm:px-10">
+            <h2 class="text-lg px-8 font-bold md:text-2xl text-gray-300">Séries</h2>
+            <div
+                class="flex w-screen px-4 gap-4 lg:gap-8 mt-2 overflow-x-auto *:rounded-md *:w-40 *:lg:w-64 *:cursor-pointer">
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/2e22c0f1-1576-4669-ba17-22970b46c455/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/f45c2d00-14df-416c-9792-be61243c5636/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/b342fc2d-6ae9-4505-a839-5eabe53ff3c2/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+
+                <img class="size-full object-cover hover:scale-105"
+                    src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/d9f68328-132c-4cad-b87a-466919529f71/compose?format=webp&label=standard_art_178&width=800"
+                    alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="container mt-32">
+        <div class="bg-[#0e0b14] rounded-t-lg w-screen p-6 sm:p-10">
+            <div class="flex justify-center">
+                <img class="w-20" src="img/disney logo.png" alt="logo Disney">
+            </div>
+            <p class="text-gray-300 text-center text-sm mt-4 text-balance">
+                Este projeto foi desenvolvido exclusivamente para fins educacionais, sem qualquer intenção de lucro.
+                Todos os direitos autorais e marcas registradas pertencem aos seus respectivos proprietários. Não há
+                intenção de infringir quaisquer direitos de propriedade intelectual.
+            </p>
+            <p class="text-gray-300 text-center text-sm mt-4 text-balance font-bold">
+                © Dev.Luan - 2025
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
